@@ -1,0 +1,25 @@
+<aside class="main-sidebar">
+    <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">搜索栏</li>
+        <li>
+            <div class="input-group mb-3">
+                <input data-bind="value: current, valueUpdate: 'afterkeydown', enterKey: filter, event: { keyup: setBtnName}" type="text" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                    <button data-bind="click: filter, text: btnName" class="btn btn-secondary" type="button">Reset</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="sidebar-menu" data-bind="foreach: markerList">
+        <li class="marker-name" data-bind="text: name, event: { click: $root.buttonClicked }"></li>
+    </ul>
+</aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div id="container"></div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
